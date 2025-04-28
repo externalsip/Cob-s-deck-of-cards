@@ -1,0 +1,24 @@
+﻿  card.cpp
+  cardRow.cpp
+E:\DeckShuffling\DeckShuffling\cardRow.cpp(19,11): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+E:\DeckShuffling\DeckShuffling\cardRow.cpp(71,10): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+E:\DeckShuffling\DeckShuffling\cardRow.cpp(85,10): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+E:\DeckShuffling\DeckShuffling\cardRow.cpp(90,24): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  console.cpp
+  deck.cpp
+E:\DeckShuffling\DeckShuffling\deck.cpp(69,8): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+E:\DeckShuffling\DeckShuffling\deck.cpp(116,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+E:\DeckShuffling\DeckShuffling\deck.cpp(140,22): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  HousePile.cpp
+E:\DeckShuffling\DeckShuffling\HousePile.cpp(4,10): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+E:\DeckShuffling\DeckShuffling\HousePile.cpp(27,10): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+E:\DeckShuffling\DeckShuffling\HousePile.cpp(36,10): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+E:\DeckShuffling\DeckShuffling\HousePile.cpp(48,18): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  main.cpp
+  SolitaireCore.cpp
+E:\DeckShuffling\DeckShuffling\SolitaireCore.cpp(156,10): warning C4101: 'cons': unreferenced local variable
+  Stockpile.cpp
+E:\DeckShuffling\DeckShuffling\Stockpile.cpp(40,10): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+E:\DeckShuffling\DeckShuffling\Stockpile.cpp(56,10): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Generating Code...
+  DeckShuffling.vcxproj -> E:\DeckShuffling\x64\Debug\DeckShuffling.exe
