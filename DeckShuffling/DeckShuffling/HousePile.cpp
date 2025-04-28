@@ -25,7 +25,12 @@ void HousePile::AddCard(shared_ptr<card> C) {
 
 shared_ptr<card> HousePile::GiveCard() {
 	int len = pile.size();
-	return pile[len - 1];
+	if (len > 0) {
+		return pile[len - 1];
+	}
+	else {
+		return nullptr;
+	}
 }
 
 void HousePile::RemoveCard() {

@@ -12,8 +12,7 @@ int main() {
 	bool playingSolitaire = false;
 	while (isRunning) {
 
-		ostringstream message;
-		ostringstream oMessage;		
+		ostringstream message;		
 		if (!playingSolitaire) {
 			int decision = cardDeck.AskUserInput<int>("What will it be today ? \n |1| Generate a card deck \n |2| Shuffle the card deck \n |3| Un-shuffle the card deck  \n |4| Display the card deck \n |5| Play Solitaire \n |6| Quit \n");
 			switch (decision) {
@@ -71,20 +70,21 @@ int main() {
 			}
 			if (isRunning && !playingSolitaire) {
 				decision = cardDeck.AskUserInput<int>("Anything else ? \n |1| Yes \n |2| No \n");
+				message.clear();
 				switch (decision) {
 				case 1: {
 					break;
 				}
 				case 2: {
 					isRunning = false;
-					oMessage << "Goodbye" << '\n';
-					cons.DisplayMessage(oMessage.str());
+					message << "Goodbye" << '\n';
+					cons.DisplayMessage(message.str());
 					break;
 				}
 				default: {
 					isRunning = false;
-					oMessage << "Unknown character, goodbye" << '\n';
-					cons.DisplayMessage(oMessage.str());
+					message << "Unknown character, goodbye" << '\n';
+					cons.DisplayMessage(message.str());
 					break;
 				}
 				}
@@ -92,7 +92,7 @@ int main() {
 		}
 		else {
 			SolitaireClass.DisplayGame();
-			int decision = cardDeck.AskUserInput<int>("Cob's Solitaire \n |1| Swap cards from one row to another \n |2| Add to waste pile \n |3| Take card from waste pile \n |4| Send a card to one of the piles \n |5| Take a card from one of the piles \n |6| Move a card from the waste to a pile \n |7| Quit \n");
+			int decision = cardDeck.AskUserInput<int>("Cob's Solitaire \n |1| Swap cards from one row to another \n |2| Add to waste pile \n |3| Take card from waste pile \n |4| Send card from column to one of the piles \n |5| Take a card from one of the piles \n |6| Move a card from the waste to a pile \n |7| Quit \n");
 			switch (decision) {
 			case 1: {
 				int i = cardDeck.AskUserInput<int>("From which column do you wish to take the cards ? \n");
@@ -133,11 +133,21 @@ int main() {
 				cons.DisplayMessage(message.str());
 				break;
 			}
+			default: {
+				message << "Unknown Character";
+				cons.DisplayMessage(message.str());
 			}
-			system("cls");
+			}
 			if (SolitaireClass.CheckWin()) {
 				message.clear();
-				message << "Big Win" << '\n';
+				cons.ClearConsole();
+				message << "######  ###  #####     #     # ### #     # ### ### ###" << '\n';
+				message << "#     #  #  #     #    #  #  #  #  ##    # ### ### ###" << '\n';
+				message << "#     #  #  #          #  #  #  #  # #   # ### ### ###" << '\n';
+				message << "######   #  #  ####    #  #  #  #  #  #  #  #   #   # " << '\n';
+				message << "#     #  #  #     #    #  #  #  #  #   # #            " << '\n';
+				message << "#     #  #  #     #    #  #  #  #  #    ## ### ### ###" << '\n';
+				message << "######  ###  #####      ## ##  ### #     # ### ### ###" << '\n';
 				cons.DisplayMessage(message.str());
 				message.clear();
 				decision = cardDeck.AskUserInput<int>("Do you wish to play again ? \n |1| Yes \n |2| No \n |3| Quit software");

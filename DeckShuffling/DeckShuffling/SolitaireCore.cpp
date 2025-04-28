@@ -38,7 +38,7 @@ void SolitaireCore::CreateGame() {
 void SolitaireCore::DisplayGame() {
 	ostringstream msg;
 	console cons;
-	msg << "  1   2   3   4   5   6   7" << '\n';
+	msg << "   1   2   3   4   5   6   7" << '\n';
 	int GameHeight = rowContentArr[0]->GetRowLength();
 	//To make sure the game always displays every card, it will make always take as many lines as the longest vector out of the 7 rows.
 	for (int i = 1; i < 7; i++) {
@@ -47,11 +47,12 @@ void SolitaireCore::DisplayGame() {
 		}
 	}
 	//This loop displays every card currently on the game board.
-	for (int i = 0; i < GameHeight; i++) {
-		msg << i + 1 << " ";
-		if (i + 1 > 9) {
-			msg << " ";
+	for (int i = 0; i < GameHeight; i++) {		
+		if (i + 1 < 10) {
+			msg << "0";
 		}
+		msg << i + 1 << " ";
+
 		for (int j = 0; j < 7; j++) {
 			msg << rowContentArr[j]->GetCard(i) << " ";
 		}
@@ -74,13 +75,13 @@ void SolitaireCore::MoveCards(int i, int j, int k) {
 	int nI = i - 1;
 	int nJ = j - 1;
 	int nK = k - 1;
-
+	cons.ClearConsole();
 	if ( nI < 7 && nJ < 7 && nK < rowContentArr[nI]->GetRowLength() && nI >= 0 && nJ >= 0 && nK >= 0) {
 		vector<shared_ptr<card>> CardsToGive = rowContentArr[nI]->GiveCards(nK);
 		if (rowContentArr[nJ]->bCanReceiveCard(CardsToGive[0]) && rowContentArr[nI]->bCanGiveCards(nK)) {
 			rowContentArr[nI]->RemoveCards(nK);
 			rowContentArr[nJ]->ReceiveCards(CardsToGive);
-			msg << "Cards succesfuly sent !";
+			msg << "Cards succesfuly sent from column " << i << " to column " << j << "!" << '\n';
 		}
 		else {
 			CardsToGive.clear();
@@ -96,6 +97,7 @@ void SolitaireCore::MoveCards(int i, int j, int k) {
 void SolitaireCore::GetCardFromWaste(int targetRow) {
 	ostringstream msg;
 	console cons;
+	cons.ClearConsole();
 	int nI = targetRow - 1;
 	shared_ptr<card> wasteCard = stock->SendCardFromWaste();
 	if (wasteCard != nullptr) {
@@ -122,6 +124,8 @@ void SolitaireCore::GetCardFromWaste(int targetRow) {
 }
 
 void SolitaireCore::HitWaste() {
+	console cons;
+	cons.ClearConsole();
 	stock->SendCardsToWaste();
 }
 
@@ -130,16 +134,17 @@ void SolitaireCore::SendCardToPile(int i, int j) {
 	int nJ = j - 1;
 	ostringstream msg;
 	console cons;
+	cons.ClearConsole();
 	if (nI >= 0 && nI < 7 && nJ >= 0 && nJ < 4) {
 		int len = rowContentArr[nI]->GetRowLength() - 1;
 		shared_ptr<card> C = rowContentArr[nI]->GiveCards(len)[0];
 		if (pileArr[nJ]->bCanReceiveCard(C)) {
 			pileArr[nJ]->AddCard(C);
 			rowContentArr[nI]->RemoveCards(len);
-			msg << "Card successfully added to pile !" << '\n';
+			msg << C->DisplayInfo() <<" successfully added to pile " << j << "!" << '\n';
 		}
 		else {
-			msg << "ERROR! The selected card is not compatible with the pile." << '\n';
+			msg << "ERROR! " << C->DisplayInfo() << "  is not compatible with the pile." << '\n';
 		}
 	}
 	else {
@@ -154,27 +159,36 @@ void SolitaireCore::GetCardFromPile(int i, int j) {
 	int nJ = j - 1;
 	ostringstream msg;
 	console cons;
+	cons.ClearConsole();
 	if (nI >= 0 && nI < 4 && nJ >= 0 && nJ < 7) {
 		shared_ptr<card> C = pileArr[nI]->GiveCard();
-		if (rowContentArr[nJ]->bCanReceiveCard(C)) {
-			vector<shared_ptr<card>> CA;
-			CA.push_back(C);
-			rowContentArr[nJ]->ReceiveCards(CA);
-			pileArr[nI]->RemoveCard();
-			msg << "Card moved from pile to column." << '\n';
+		if (C != nullptr) {
+			if (rowContentArr[nJ]->bCanReceiveCard(C)) {
+				vector<shared_ptr<card>> CA;
+				CA.push_back(C);
+				rowContentArr[nJ]->ReceiveCards(CA);
+				pileArr[nI]->RemoveCard();
+				msg << "Card moved from pile to column." << '\n';
+				}
+			else {
+				msg << "ERROR! The selected card is not compatible with the selected column." << '\n';
+			}
 		}
 		else {
-			msg << "ERROR! The selected card is not compatible with the selected column." << '\n';
+			msg << "ERROR! The selected pile is empty" << '\n';
 		}
+		
 	}
 	else {
 		msg << "ERROR! The selected pile or column does not exist." << '\n';
 	}
+	cons.DisplayMessage(msg.str());
 }
 
 void SolitaireCore::SendCardFromWasteToPile(int i) {
 	ostringstream msg;
 	console cons;
+	cons.ClearConsole();
 	int nI = i - 1;
 	shared_ptr<card> wasteCard = stock->SendCardFromWaste();
 	if (wasteCard != nullptr) {
@@ -199,11 +213,12 @@ void SolitaireCore::SendCardFromWasteToPile(int i) {
 }
 
 bool SolitaireCore::CheckWin() {
+
 	for (int i = 0; i < 4; i++) {
 		if (pileArr[i]->GivePileSize() != 13) {
 			break;
 		}
-		else if (i == 3) {
+		else if (i == 3) {	
 			return true;
 		}
 	}

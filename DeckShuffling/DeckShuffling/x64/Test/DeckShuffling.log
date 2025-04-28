@@ -1,0 +1,14 @@
+﻿  HousePile.cpp
+D:\Program Files\Gitub Projects\Cob-s-deck-of-cards\DeckShuffling\DeckShuffling\HousePile.cpp(4,10): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\Program Files\Gitub Projects\Cob-s-deck-of-cards\DeckShuffling\DeckShuffling\HousePile.cpp(27,10): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\Program Files\Gitub Projects\Cob-s-deck-of-cards\DeckShuffling\DeckShuffling\HousePile.cpp(41,10): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\Program Files\Gitub Projects\Cob-s-deck-of-cards\DeckShuffling\DeckShuffling\HousePile.cpp(53,18): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  SolitaireCore.cpp
+  console.cpp
+  deck.cpp
+D:\Program Files\Gitub Projects\Cob-s-deck-of-cards\DeckShuffling\DeckShuffling\deck.cpp(69,8): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\Program Files\Gitub Projects\Cob-s-deck-of-cards\DeckShuffling\DeckShuffling\deck.cpp(116,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+D:\Program Files\Gitub Projects\Cob-s-deck-of-cards\DeckShuffling\DeckShuffling\deck.cpp(140,22): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  main.cpp
+  Generating Code...
+  DeckShuffling.vcxproj -> D:\Program Files\Gitub Projects\Cob-s-deck-of-cards\DeckShuffling\x64\Test\DeckShuffling.exe
