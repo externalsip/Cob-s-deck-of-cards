@@ -39,6 +39,9 @@
     <ClCompile Include="HousePile.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Score.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="card.h">
@@ -60,6 +63,9 @@
       <Filter>Resource Files</Filter>
     </ClInclude>
     <ClInclude Include="HousePile.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Score.h">
       <Filter>Resource Files</Filter>
     </ClInclude>
   </ItemGroup>

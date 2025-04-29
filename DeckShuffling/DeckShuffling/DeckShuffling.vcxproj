@@ -183,6 +183,7 @@
     <ClCompile Include="deck.cpp" />
     <ClCompile Include="HousePile.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Score.cpp" />
     <ClCompile Include="SolitaireCore.cpp" />
     <ClCompile Include="Stockpile.cpp" />
   </ItemGroup>
@@ -192,6 +193,7 @@
     <ClInclude Include="console.h" />
     <ClInclude Include="deck.h" />
     <ClInclude Include="HousePile.h" />
+    <ClInclude Include="Score.h" />
     <ClInclude Include="SolitaireCore.h" />
     <ClInclude Include="Stockpile.h" />
   </ItemGroup>

@@ -2,6 +2,7 @@
 
 void SolitaireCore::CreateGame() {
 	deck cardDeck;
+	score->NewGame();
 	cardDeck.GenerateDeck();
 	cardDeck.ShuffleDeck();
 
@@ -66,6 +67,7 @@ void SolitaireCore::DisplayGame() {
 		msg << pileArr[i]->ShowTopCard() << " ";
 	}
 	msg << '\n';
+	msg << "Moves: " << score->DisplayScore();
 	cons.DisplayMessage(msg.str());
 }
 
@@ -81,6 +83,7 @@ void SolitaireCore::MoveCards(int i, int j, int k) {
 		if (rowContentArr[nJ]->bCanReceiveCard(CardsToGive[0]) && rowContentArr[nI]->bCanGiveCards(nK)) {
 			rowContentArr[nI]->RemoveCards(nK);
 			rowContentArr[nJ]->ReceiveCards(CardsToGive);
+			score->IncrementScore();
 			msg << "Cards succesfuly sent from column " << i << " to column " << j << "!" << '\n';
 		}
 		else {
@@ -107,6 +110,7 @@ void SolitaireCore::GetCardFromWaste(int targetRow) {
 				wasteCardV.push_back(wasteCard);
 				rowContentArr[nI]->ReceiveCards(wasteCardV);
 				stock->RemoveCardFromPile();
+				score->IncrementScore();
 				msg << "Card taken from waste succesfully !";
 			}
 			else {
@@ -141,6 +145,7 @@ void SolitaireCore::SendCardToPile(int i, int j) {
 		if (pileArr[nJ]->bCanReceiveCard(C)) {
 			pileArr[nJ]->AddCard(C);
 			rowContentArr[nI]->RemoveCards(len);
+			score->IncrementScore();
 			msg << C->DisplayInfo() <<" successfully added to pile " << j << "!" << '\n';
 		}
 		else {
@@ -168,6 +173,7 @@ void SolitaireCore::GetCardFromPile(int i, int j) {
 				CA.push_back(C);
 				rowContentArr[nJ]->ReceiveCards(CA);
 				pileArr[nI]->RemoveCard();
+				score->IncrementScore();
 				msg << "Card moved from pile to column." << '\n';
 				}
 			else {
@@ -196,6 +202,7 @@ void SolitaireCore::SendCardFromWasteToPile(int i) {
 			if (pileArr[nI]->bCanReceiveCard(wasteCard)) {
 				pileArr[nI]->AddCard(wasteCard);
 				stock->RemoveCardFromPile();
+				score->IncrementScore();
 				msg << "Card taken from waste succesfully !";
 			}
 			else {
@@ -223,4 +230,8 @@ bool SolitaireCore::CheckWin() {
 		}
 	}
 	return false;
+}
+
+string SolitaireCore::DisplayScores() {
+	return score->DisplayAllScores();
 }

@@ -8,6 +8,7 @@
 #include "console.h"
 #include "Stockpile.h"
 #include "HousePile.h"
+#include "Score.h"
 
 class SolitaireCore {
 public:
@@ -24,8 +25,11 @@ public:
 	void SendCardFromWasteToPile(int i);
 
 	bool CheckWin();
+
+	string DisplayScores();
 private:
 	vector<shared_ptr<card>> emptyVector;
+	vector<int> emptyInt;
 
 	shared_ptr<cardRow> row1 = make_unique<cardRow>(emptyVector);
 	shared_ptr<cardRow> row2 = make_unique<cardRow>(emptyVector);
@@ -45,4 +49,6 @@ private:
 	shared_ptr<HousePile> pile4 = make_unique<HousePile>(emptyVector);
 
 	shared_ptr<HousePile> pileArr[4] = { pile1, pile2, pile3, pile4 };
+
+	unique_ptr<Score> score = make_unique<Score>(emptyInt); 
 };
