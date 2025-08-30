@@ -29,6 +29,7 @@ int main() {
 				cons.ClearConsole();
 				if (cardDeck.GetDeckSize() > 0) {
 					cons.ClearConsole();
+					cardDeck.ShuffleDeck();
 					message << "Deck shuffled" << '\n';
 				}
 				else {
