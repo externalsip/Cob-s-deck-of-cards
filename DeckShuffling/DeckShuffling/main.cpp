@@ -4,7 +4,7 @@
 
 int main() {
 	deck cardDeck;
-	console cons;
+	console console;
 	
 	SolitaireCore solitaireClass;
 
@@ -20,15 +20,15 @@ int main() {
 			switch (decision) {
 			case 1: {
 				cardDeck.GenerateDeck();
-				cons.ClearConsole();
+				console.ClearConsole();
 				message << "Deck generated" << '\n';
-				cons.DisplayMessage(message.str());
+				console.DisplayMessage(message.str());
 				break;
 			}
 			case 2: {					
-				cons.ClearConsole();
+				console.ClearConsole();
 				if (cardDeck.GetDeckSize() > 0) {
-					cons.ClearConsole();
+					console.ClearConsole();
 					cardDeck.ShuffleDeck();
 					message << "Deck shuffled" << '\n';
 				}
@@ -36,30 +36,30 @@ int main() {
 					message << "Generate a deck first." << '\n';
 
 				}					
-				cons.DisplayMessage(message.str());
+				console.DisplayMessage(message.str());
 				break;
 			}
 			case 3: {
-				cons.ClearConsole();
+				console.ClearConsole();
 				if (cardDeck.GetDeckSize() > 0) {
 					cardDeck.UnShuffleDeck();
 					message << "Deck un-shuffled" << '\n';
-					cons.DisplayMessage(message.str());
+					console.DisplayMessage(message.str());
 				}
 				else {
 					message << "Generate a deck first." << '\n';
-					cons.DisplayMessage(message.str());
+					console.DisplayMessage(message.str());
 				}
 				break;
 			}
 			case 4: {
-				cons.ClearConsole();
+				console.ClearConsole();
 				cardDeck.DisplayDeck();
 				break;
 			}
 			case 5: {
 				playingSolitaire = true;
-				cons.ClearConsole();
+				console.ClearConsole();
 				solitaireClass.CreateGame();
 				break;
 			}
@@ -71,7 +71,7 @@ int main() {
 			}
 			default: {
 				message << "Unkown character" << '\n';
-				cons.DisplayMessage(message.str());
+				console.DisplayMessage(message.str());
 				break;
 			}
 			}
@@ -79,7 +79,7 @@ int main() {
 				decision = cardDeck.AskUserInput<int>("Anything else ? \n |1| Yes \n |2| No \n");
 				message.str("");
 				message.clear();
-				cons.ClearConsole();
+				console.ClearConsole();
 				switch (decision) {
 				case 1: {
 					break;
@@ -87,13 +87,13 @@ int main() {
 				case 2: {
 					isRunning = false;
 					message << "Goodbye" << '\n';
-					cons.DisplayMessage(message.str());
+					console.DisplayMessage(message.str());
 					break;
 				}
 				default: {
 					isRunning = false;
 					message << "Unknown character, goodbye" << '\n';
-					cons.DisplayMessage(message.str());
+					console.DisplayMessage(message.str());
 					break;
 				}
 				}
@@ -140,12 +140,12 @@ int main() {
 				case 7: {
 					message << "Goodbye";
 					isRunning = false;
-					cons.DisplayMessage(message.str());
+					console.DisplayMessage(message.str());
 					break;
 				}
 				default: {
 					message << "Unknown Character";
-					cons.DisplayMessage(message.str());
+					console.DisplayMessage(message.str());
 				}
 				}
 			}
@@ -155,7 +155,7 @@ int main() {
 					won = true;
 					wasDisplayed = true;
 					message.clear();
-					cons.ClearConsole();
+					console.ClearConsole();
 					message << "######  ###  #####     #     # ### #     # ### ### ###" << '\n';
 					message << "#     #  #  #     #    #  #  #  #  ##    # ### ### ###" << '\n';
 					message << "#     #  #  #          #  #  #  #  # #   # ### ### ###" << '\n';
@@ -163,7 +163,7 @@ int main() {
 					message << "#     #  #  #     #    #  #  #  #  #   # #            " << '\n';
 					message << "#     #  #  #     #    #  #  #  #  #    ## ### ### ###" << '\n';
 					message << "######  ###  #####      ## ##  ### #     # ### ### ###" << '\n';
-					cons.DisplayMessage(message.str());
+					console.DisplayMessage(message.str());
 					message.str("");
 					message.clear();
 				}
@@ -184,14 +184,14 @@ int main() {
 				case 3: {
 					wasDisplayed = true;
 					message << "Here are every scores you have obtained this session: " << '\n';
-					cons.ClearConsole();
+					console.ClearConsole();
 					message << solitaireClass.DisplayScores();
-					cons.DisplayMessage(message.str());
+					console.DisplayMessage(message.str());
 					break;
 				}
 				case 4: {
 					message << "Goodbye";
-					cons.DisplayMessage(message.str());
+					console.DisplayMessage(message.str());
 					isRunning = false;
 					break;
 				}

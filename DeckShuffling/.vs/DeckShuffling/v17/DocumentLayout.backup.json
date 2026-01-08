@@ -3,8 +3,56 @@
   "WorkspaceRootPath": "D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{49E3DC50-948C-4142-991D-444D421249E4}|DeckShuffling\\DeckShuffling.vcxproj|D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\SolitaireCore.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{49E3DC50-948C-4142-991D-444D421249E4}|DeckShuffling\\DeckShuffling.vcxproj|solutionrelative:DeckShuffling\\SolitaireCore.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{49E3DC50-948C-4142-991D-444D421249E4}|DeckShuffling\\DeckShuffling.vcxproj|D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\Score.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{49E3DC50-948C-4142-991D-444D421249E4}|DeckShuffling\\DeckShuffling.vcxproj|solutionrelative:DeckShuffling\\Score.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49E3DC50-948C-4142-991D-444D421249E4}|DeckShuffling\\DeckShuffling.vcxproj|D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\Score.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{49E3DC50-948C-4142-991D-444D421249E4}|DeckShuffling\\DeckShuffling.vcxproj|solutionrelative:DeckShuffling\\Score.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49E3DC50-948C-4142-991D-444D421249E4}|DeckShuffling\\DeckShuffling.vcxproj|D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{49E3DC50-948C-4142-991D-444D421249E4}|DeckShuffling\\DeckShuffling.vcxproj|solutionrelative:DeckShuffling\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49E3DC50-948C-4142-991D-444D421249E4}|DeckShuffling\\DeckShuffling.vcxproj|D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\cardRow.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{49E3DC50-948C-4142-991D-444D421249E4}|DeckShuffling\\DeckShuffling.vcxproj|solutionrelative:DeckShuffling\\cardRow.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49E3DC50-948C-4142-991D-444D421249E4}|DeckShuffling\\DeckShuffling.vcxproj|D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\card.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{49E3DC50-948C-4142-991D-444D421249E4}|DeckShuffling\\DeckShuffling.vcxproj|solutionrelative:DeckShuffling\\card.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49E3DC50-948C-4142-991D-444D421249E4}|DeckShuffling\\DeckShuffling.vcxproj|D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\console.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{49E3DC50-948C-4142-991D-444D421249E4}|DeckShuffling\\DeckShuffling.vcxproj|solutionrelative:DeckShuffling\\console.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49E3DC50-948C-4142-991D-444D421249E4}|DeckShuffling\\DeckShuffling.vcxproj|D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\deck.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{49E3DC50-948C-4142-991D-444D421249E4}|DeckShuffling\\DeckShuffling.vcxproj|solutionrelative:DeckShuffling\\deck.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49E3DC50-948C-4142-991D-444D421249E4}|DeckShuffling\\DeckShuffling.vcxproj|D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\deck.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{49E3DC50-948C-4142-991D-444D421249E4}|DeckShuffling\\DeckShuffling.vcxproj|solutionrelative:DeckShuffling\\deck.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49E3DC50-948C-4142-991D-444D421249E4}|DeckShuffling\\DeckShuffling.vcxproj|D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\HousePile.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{49E3DC50-948C-4142-991D-444D421249E4}|DeckShuffling\\DeckShuffling.vcxproj|solutionrelative:DeckShuffling\\HousePile.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49E3DC50-948C-4142-991D-444D421249E4}|DeckShuffling\\DeckShuffling.vcxproj|D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\HousePile.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{49E3DC50-948C-4142-991D-444D421249E4}|DeckShuffling\\DeckShuffling.vcxproj|solutionrelative:DeckShuffling\\HousePile.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49E3DC50-948C-4142-991D-444D421249E4}|DeckShuffling\\DeckShuffling.vcxproj|D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\console.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{49E3DC50-948C-4142-991D-444D421249E4}|DeckShuffling\\DeckShuffling.vcxproj|solutionrelative:DeckShuffling\\console.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49E3DC50-948C-4142-991D-444D421249E4}|DeckShuffling\\DeckShuffling.vcxproj|D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\cardRow.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{49E3DC50-948C-4142-991D-444D421249E4}|DeckShuffling\\DeckShuffling.vcxproj|solutionrelative:DeckShuffling\\cardRow.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49E3DC50-948C-4142-991D-444D421249E4}|DeckShuffling\\DeckShuffling.vcxproj|D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\card.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{49E3DC50-948C-4142-991D-444D421249E4}|DeckShuffling\\DeckShuffling.vcxproj|solutionrelative:DeckShuffling\\card.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{49E3DC50-948C-4142-991D-444D421249E4}|DeckShuffling\\DeckShuffling.vcxproj|D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\SolitaireCore.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -15,60 +63,12 @@
       "RelativeMoniker": "D:0:0:{49E3DC50-948C-4142-991D-444D421249E4}|DeckShuffling\\DeckShuffling.vcxproj|solutionrelative:DeckShuffling\\Stockpile.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{49E3DC50-948C-4142-991D-444D421249E4}|DeckShuffling\\DeckShuffling.vcxproj|D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\HousePile.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{49E3DC50-948C-4142-991D-444D421249E4}|DeckShuffling\\DeckShuffling.vcxproj|solutionrelative:DeckShuffling\\HousePile.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{49E3DC50-948C-4142-991D-444D421249E4}|DeckShuffling\\DeckShuffling.vcxproj|D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\cardRow.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{49E3DC50-948C-4142-991D-444D421249E4}|DeckShuffling\\DeckShuffling.vcxproj|solutionrelative:DeckShuffling\\cardRow.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{49E3DC50-948C-4142-991D-444D421249E4}|DeckShuffling\\DeckShuffling.vcxproj|D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{49E3DC50-948C-4142-991D-444D421249E4}|DeckShuffling\\DeckShuffling.vcxproj|solutionrelative:DeckShuffling\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{49E3DC50-948C-4142-991D-444D421249E4}|DeckShuffling\\DeckShuffling.vcxproj|D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\Score.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{49E3DC50-948C-4142-991D-444D421249E4}|DeckShuffling\\DeckShuffling.vcxproj|solutionrelative:DeckShuffling\\Score.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{49E3DC50-948C-4142-991D-444D421249E4}|DeckShuffling\\DeckShuffling.vcxproj|D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\card.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{49E3DC50-948C-4142-991D-444D421249E4}|DeckShuffling\\DeckShuffling.vcxproj|solutionrelative:DeckShuffling\\card.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{49E3DC50-948C-4142-991D-444D421249E4}|DeckShuffling\\DeckShuffling.vcxproj|D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\Stockpile.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{49E3DC50-948C-4142-991D-444D421249E4}|DeckShuffling\\DeckShuffling.vcxproj|solutionrelative:DeckShuffling\\Stockpile.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{49E3DC50-948C-4142-991D-444D421249E4}|DeckShuffling\\DeckShuffling.vcxproj|D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\Score.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{49E3DC50-948C-4142-991D-444D421249E4}|DeckShuffling\\DeckShuffling.vcxproj|solutionrelative:DeckShuffling\\Score.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{49E3DC50-948C-4142-991D-444D421249E4}|DeckShuffling\\DeckShuffling.vcxproj|D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\deck.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{49E3DC50-948C-4142-991D-444D421249E4}|DeckShuffling\\DeckShuffling.vcxproj|solutionrelative:DeckShuffling\\deck.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{49E3DC50-948C-4142-991D-444D421249E4}|DeckShuffling\\DeckShuffling.vcxproj|D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\console.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{49E3DC50-948C-4142-991D-444D421249E4}|DeckShuffling\\DeckShuffling.vcxproj|solutionrelative:DeckShuffling\\console.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{49E3DC50-948C-4142-991D-444D421249E4}|DeckShuffling\\DeckShuffling.vcxproj|D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\card.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{49E3DC50-948C-4142-991D-444D421249E4}|DeckShuffling\\DeckShuffling.vcxproj|solutionrelative:DeckShuffling\\card.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{49E3DC50-948C-4142-991D-444D421249E4}|DeckShuffling\\DeckShuffling.vcxproj|D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\HousePile.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{49E3DC50-948C-4142-991D-444D421249E4}|DeckShuffling\\DeckShuffling.vcxproj|solutionrelative:DeckShuffling\\HousePile.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{49E3DC50-948C-4142-991D-444D421249E4}|DeckShuffling\\DeckShuffling.vcxproj|D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\deck.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{49E3DC50-948C-4142-991D-444D421249E4}|DeckShuffling\\DeckShuffling.vcxproj|solutionrelative:DeckShuffling\\deck.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{49E3DC50-948C-4142-991D-444D421249E4}|DeckShuffling\\DeckShuffling.vcxproj|D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\console.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{49E3DC50-948C-4142-991D-444D421249E4}|DeckShuffling\\DeckShuffling.vcxproj|solutionrelative:DeckShuffling\\console.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{49E3DC50-948C-4142-991D-444D421249E4}|DeckShuffling\\DeckShuffling.vcxproj|D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\cardRow.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{49E3DC50-948C-4142-991D-444D421249E4}|DeckShuffling\\DeckShuffling.vcxproj|solutionrelative:DeckShuffling\\cardRow.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{49E3DC50-948C-4142-991D-444D421249E4}|DeckShuffling\\DeckShuffling.vcxproj|D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\SolitaireCore.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{49E3DC50-948C-4142-991D-444D421249E4}|DeckShuffling\\DeckShuffling.vcxproj|solutionrelative:DeckShuffling\\SolitaireCore.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -78,45 +78,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 0,
               "Title": "Score.h",
               "DocumentMoniker": "D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\Score.h",
               "RelativeDocumentMoniker": "DeckShuffling\\Score.h",
-              "ToolTip": "D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\Score.h",
-              "RelativeToolTip": "DeckShuffling\\Score.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA4AAAAAAAAAA==",
+              "ToolTip": "D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\Score.h*",
+              "RelativeToolTip": "DeckShuffling\\Score.h*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-04-29T13:26:34.473Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 13,
               "Title": "SolitaireCore.h",
               "DocumentMoniker": "D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\SolitaireCore.h",
               "RelativeDocumentMoniker": "DeckShuffling\\SolitaireCore.h",
               "ToolTip": "D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\SolitaireCore.h",
               "RelativeToolTip": "DeckShuffling\\SolitaireCore.h",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABwAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAADUAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-04-25T19:50:06.978Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "HousePile.h",
-              "DocumentMoniker": "D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\HousePile.h",
-              "RelativeDocumentMoniker": "DeckShuffling\\HousePile.h",
-              "ToolTip": "D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\HousePile.h",
-              "RelativeToolTip": "DeckShuffling\\HousePile.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-27T20:57:34.462Z",
               "EditorCaption": ""
             },
             {
@@ -127,40 +114,27 @@
               "RelativeDocumentMoniker": "DeckShuffling\\card.h",
               "ToolTip": "D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\card.h",
               "RelativeToolTip": "DeckShuffling\\card.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-04-24T14:35:46.594Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Stockpile.h",
-              "DocumentMoniker": "D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\Stockpile.h",
-              "RelativeDocumentMoniker": "DeckShuffling\\Stockpile.h",
-              "ToolTip": "D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\Stockpile.h",
-              "RelativeToolTip": "DeckShuffling\\Stockpile.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-27T17:44:04.663Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 7,
               "Title": "deck.h",
               "DocumentMoniker": "D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\deck.h",
               "RelativeDocumentMoniker": "DeckShuffling\\deck.h",
               "ToolTip": "D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\deck.h",
               "RelativeToolTip": "DeckShuffling\\deck.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABkAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-04-24T14:48:26.65Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 10,
               "Title": "console.h",
               "DocumentMoniker": "D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\console.h",
               "RelativeDocumentMoniker": "DeckShuffling\\console.h",
@@ -173,129 +147,91 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 11,
               "Title": "cardRow.h",
               "DocumentMoniker": "D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\cardRow.h",
               "RelativeDocumentMoniker": "DeckShuffling\\cardRow.h",
               "ToolTip": "D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\cardRow.h",
               "RelativeToolTip": "DeckShuffling\\cardRow.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-27T18:45:58.859Z"
+              "WhenOpened": "2025-04-27T18:45:58.859Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "HousePile.h",
+              "DocumentMoniker": "D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\HousePile.h",
+              "RelativeDocumentMoniker": "DeckShuffling\\HousePile.h",
+              "ToolTip": "D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\HousePile.h*",
+              "RelativeToolTip": "DeckShuffling\\HousePile.h*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-27T20:57:34.462Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Stockpile.h",
+              "DocumentMoniker": "D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\Stockpile.h",
+              "RelativeDocumentMoniker": "DeckShuffling\\Stockpile.h",
+              "ToolTip": "D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\Stockpile.h*",
+              "RelativeToolTip": "DeckShuffling\\Stockpile.h*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-27T17:44:04.663Z",
+              "EditorCaption": ""
             }
           ]
         },
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Score.cpp",
-              "DocumentMoniker": "D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\Score.cpp",
-              "RelativeDocumentMoniker": "DeckShuffling\\Score.cpp",
-              "ToolTip": "D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\Score.cpp",
-              "RelativeToolTip": "DeckShuffling\\Score.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-29T13:26:21.323Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SolitaireCore.cpp",
-              "DocumentMoniker": "D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\SolitaireCore.cpp",
-              "RelativeDocumentMoniker": "DeckShuffling\\SolitaireCore.cpp",
-              "ToolTip": "D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\SolitaireCore.cpp",
-              "RelativeToolTip": "DeckShuffling\\SolitaireCore.cpp",
-              "ViewState": "AgIAAM8AAAAAAAAAAAAAAH0AAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-27T16:47:34.036Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "cardRow.cpp",
-              "DocumentMoniker": "D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\cardRow.cpp",
-              "RelativeDocumentMoniker": "DeckShuffling\\cardRow.cpp",
-              "ToolTip": "D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\cardRow.cpp",
-              "RelativeToolTip": "DeckShuffling\\cardRow.cpp",
-              "ViewState": "AgIAAC4AAAAAAAAAAADwv08AAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-27T13:40:56.576Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "HousePile.cpp",
-              "DocumentMoniker": "D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\HousePile.cpp",
-              "RelativeDocumentMoniker": "DeckShuffling\\HousePile.cpp",
-              "ToolTip": "D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\HousePile.cpp",
-              "RelativeToolTip": "DeckShuffling\\HousePile.cpp",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB8AAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-27T20:57:24.341Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "main.cpp",
-              "DocumentMoniker": "D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\main.cpp",
-              "RelativeDocumentMoniker": "DeckShuffling\\main.cpp",
-              "ToolTip": "D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\main.cpp",
-              "RelativeToolTip": "DeckShuffling\\main.cpp",
-              "ViewState": "AgIAAGoAAAAAAAAAAAAjwIMAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-24T14:34:41.909Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Stockpile.cpp",
-              "DocumentMoniker": "D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\Stockpile.cpp",
-              "RelativeDocumentMoniker": "DeckShuffling\\Stockpile.cpp",
-              "ToolTip": "D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\Stockpile.cpp",
-              "RelativeToolTip": "DeckShuffling\\Stockpile.cpp",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACkAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-27T17:43:53.82Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "deck.cpp",
-              "DocumentMoniker": "D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\deck.cpp",
-              "RelativeDocumentMoniker": "DeckShuffling\\deck.cpp",
-              "ToolTip": "D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\deck.cpp",
-              "RelativeToolTip": "DeckShuffling\\deck.cpp",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAAAGYAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-01-08T15:31:09.045Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
               "Title": "card.cpp",
               "DocumentMoniker": "D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\card.cpp",
               "RelativeDocumentMoniker": "DeckShuffling\\card.cpp",
               "ToolTip": "D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\card.cpp",
               "RelativeToolTip": "DeckShuffling\\card.cpp",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB4AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAACEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-24T14:35:08.772Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 6,
+              "Title": "deck.cpp",
+              "DocumentMoniker": "D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\deck.cpp",
+              "RelativeDocumentMoniker": "DeckShuffling\\deck.cpp",
+              "ToolTip": "D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\deck.cpp",
+              "RelativeToolTip": "DeckShuffling\\deck.cpp",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAAAIkAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-01-08T15:31:09.045Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "cardRow.cpp",
+              "DocumentMoniker": "D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\cardRow.cpp",
+              "RelativeDocumentMoniker": "DeckShuffling\\cardRow.cpp",
+              "ToolTip": "D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\cardRow.cpp",
+              "RelativeToolTip": "DeckShuffling\\cardRow.cpp",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAAAUAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-27T13:40:56.576Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "console.cpp",
               "DocumentMoniker": "D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\console.cpp",
               "RelativeDocumentMoniker": "DeckShuffling\\console.cpp",
@@ -304,6 +240,71 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-24T14:54:12.486Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "main.cpp",
+              "DocumentMoniker": "D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\main.cpp",
+              "RelativeDocumentMoniker": "DeckShuffling\\main.cpp",
+              "ToolTip": "D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\main.cpp*",
+              "RelativeToolTip": "DeckShuffling\\main.cpp*",
+              "ViewState": "AgIAAJkAAAAAAAAAAAAAALsAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-24T14:34:41.909Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Score.cpp",
+              "DocumentMoniker": "D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\Score.cpp",
+              "RelativeDocumentMoniker": "DeckShuffling\\Score.cpp",
+              "ToolTip": "D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\Score.cpp*",
+              "RelativeToolTip": "DeckShuffling\\Score.cpp*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-29T13:26:21.323Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "HousePile.cpp",
+              "DocumentMoniker": "D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\HousePile.cpp",
+              "RelativeDocumentMoniker": "DeckShuffling\\HousePile.cpp",
+              "ToolTip": "D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\HousePile.cpp*",
+              "RelativeToolTip": "DeckShuffling\\HousePile.cpp*",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAwAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-27T20:57:24.341Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Stockpile.cpp",
+              "DocumentMoniker": "D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\Stockpile.cpp",
+              "RelativeDocumentMoniker": "DeckShuffling\\Stockpile.cpp",
+              "ToolTip": "D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\Stockpile.cpp*",
+              "RelativeToolTip": "DeckShuffling\\Stockpile.cpp*",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAFAAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-27T17:43:53.82Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "SolitaireCore.cpp",
+              "DocumentMoniker": "D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\SolitaireCore.cpp",
+              "RelativeDocumentMoniker": "DeckShuffling\\SolitaireCore.cpp",
+              "ToolTip": "D:\\Program Files\\Gitub Projects\\DeckOfCards\\Cob-s-deck-of-cards\\DeckShuffling\\DeckShuffling\\SolitaireCore.cpp",
+              "RelativeToolTip": "DeckShuffling\\SolitaireCore.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-27T16:47:34.036Z",
               "EditorCaption": ""
             }
           ]
