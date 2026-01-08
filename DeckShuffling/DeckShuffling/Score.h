@@ -7,13 +7,12 @@ using namespace std;
 
 class Score {
 public:
-	Score(vector<int> scoreList) : scoreList(scoreList) {};
+	Score(vector<int> scoreList) : ScoreList(scoreList) {};
 
 	int DisplayScore();
 	void NewGame();
 	void IncrementScore();
 	string DisplayAllScores();
 private:
-	int score;
-	vector<int> scoreList;
+	vector<int> ScoreList;
 };

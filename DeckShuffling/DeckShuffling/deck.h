@@ -38,7 +38,7 @@ public:
 		return result;
 	}
 private:
-	vector<shared_ptr<card>> cardList; //This is the deck.
+	vector<shared_ptr<card>> CardList;
 
 	int Partition(vector<shared_ptr<card>> &cardList, int low, int high, vector<int>& objectVals);
 

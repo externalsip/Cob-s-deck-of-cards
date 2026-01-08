@@ -1,16 +1,16 @@
 #include "HousePile.h"
 
-bool HousePile::bCanReceiveCard(shared_ptr<card> C) {
-	int len = pile.size();
+bool HousePile::bCanReceiveCard(shared_ptr<card> card) {
+	int len = Pile.size();
 	if (len == 0) {
-		if (C->GetCardVal() == 1) {
+		if (card->GetCardVal() == 1) {
 			return true;
 		}
 		else {
 			return false;
 		}
 	}
-	else if (C->GetCardVal() == pile[len - 1]->GetCardVal() + 1 && C->GetCardHouse() == pile[0]->GetCardHouse()) {
+	else if (card->GetCardVal() == Pile[len - 1]->GetCardVal() + 1 && card->GetCardHouse() == Pile[0]->GetCardHouse()) {
 		return true;
 	}
 
@@ -19,14 +19,14 @@ bool HousePile::bCanReceiveCard(shared_ptr<card> C) {
 	}
 }
 
-void HousePile::AddCard(shared_ptr<card> C) {
-	pile.push_back(C);
+void HousePile::AddCard(shared_ptr<card> card) {
+	Pile.push_back(card);
 }
 
 shared_ptr<card> HousePile::GiveCard() {
-	int len = pile.size();
+	int len = Pile.size();
 	if (len > 0) {
-		return pile[len - 1];
+		return Pile[len - 1];
 	}
 	else {
 		return nullptr;
@@ -34,14 +34,14 @@ shared_ptr<card> HousePile::GiveCard() {
 }
 
 void HousePile::RemoveCard() {
-	pile.erase(pile.end() - 1);
+	Pile.erase(Pile.end() - 1);
 }
 
 string HousePile::ShowTopCard() {
-	int len = pile.size();
+	int len = Pile.size();
 	ostringstream msg;
 	if (len > 0) {
-		msg << pile[len - 1]->DisplayInfo();
+		msg << Pile[len - 1]->DisplayInfo();
 	}
 	else {
 		msg << "## ";
@@ -50,9 +50,9 @@ string HousePile::ShowTopCard() {
 }
 
 int HousePile::GivePileSize() {
-	return pile.size();
+	return Pile.size();
 }
 
 void HousePile::Reset() {
-	pile.clear();
+	Pile.clear();
 }

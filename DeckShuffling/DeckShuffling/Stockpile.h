@@ -8,7 +8,7 @@ using namespace std;
 
 class Stockpile {
 public:
-	Stockpile(vector<shared_ptr<card>> stockPile, vector<shared_ptr<card>> wastePile) : stockPile(stockPile), wastePile(wastePile) {};
+	Stockpile(vector<shared_ptr<card>> stockPile, vector<shared_ptr<card>> wastePile) : StockPile(stockPile), WastePile(wastePile) {};
 
 	void ReceiveCards(vector<shared_ptr<card>> cardList);
 	bool CardsLeftInStockPile();
@@ -21,7 +21,7 @@ public:
 
 	void Reset();
 private:
-	vector<shared_ptr<card>> stockPile;
-	vector<shared_ptr<card>> wastePile;
-	int CardCount;
+	vector<shared_ptr<card>> StockPile;
+	vector<shared_ptr<card>> WastePile;
+	int CardCount = 0;
 };

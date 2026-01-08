@@ -8,7 +8,7 @@ using namespace std;
 
 class HousePile {
 public:
-	HousePile(vector<shared_ptr<card>> pile) : pile(pile) {};
+	HousePile(vector<shared_ptr<card>> pile) : Pile(pile) {};
 
 	bool bCanReceiveCard(shared_ptr<card> card);
 	void AddCard(shared_ptr<card> card);
@@ -19,5 +19,5 @@ public:
 
 	void Reset();
 private:
-	vector<shared_ptr<card>> pile;
+	vector<shared_ptr<card>> Pile;
 };

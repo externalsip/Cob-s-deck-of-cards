@@ -1,24 +1,24 @@
 #include "Score.h"
 
 int Score::DisplayScore() {
-	int len = scoreList.size();
-	return scoreList[len - 1];
+	int lenght = ScoreList.size();
+	return ScoreList[lenght - 1];
 }
 
 void Score::NewGame() {
 	int newScore = 0;
-	scoreList.push_back(newScore);
+	ScoreList.push_back(newScore);
 }
 
 void Score::IncrementScore() {
-	int len = scoreList.size();
-	scoreList[len - 1]++;
+	int lenght = ScoreList.size();
+	ScoreList[lenght - 1]++;
 }
 
 string Score::DisplayAllScores() {
-	ostringstream msg;
-	for (int i = 0; i < scoreList.size(); i++) {
-		msg << i + 1 << ": " << scoreList[i] << '\n';
+	ostringstream message;
+	for (int i = 0; i < ScoreList.size(); i++) {
+		message << i + 1 << ": " << ScoreList[i] << '\n';
 	}
-	return msg.str();
+	return message.str();
 }

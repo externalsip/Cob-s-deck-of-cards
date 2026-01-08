@@ -6,7 +6,7 @@ int main() {
 	deck cardDeck;
 	console cons;
 	
-	SolitaireCore SolitaireClass;
+	SolitaireCore solitaireClass;
 
 	bool isRunning = true;
 	bool playingSolitaire = false;
@@ -60,7 +60,7 @@ int main() {
 			case 5: {
 				playingSolitaire = true;
 				cons.ClearConsole();
-				SolitaireClass.CreateGame();
+				solitaireClass.CreateGame();
 				break;
 			}
 
@@ -101,40 +101,40 @@ int main() {
 		}
 		else {
 			if (!won) {
-				SolitaireClass.DisplayGame();
+				solitaireClass.DisplayGame();
 				int decision = cardDeck.AskUserInput<int>("Cob's Solitaire \n |1| Swap cards from one row to another \n |2| Add to waste pile \n |3| Take card from waste pile \n |4| Send card from column to one of the piles \n |5| Take a card from one of the piles \n |6| Move a card from the waste to a pile \n |7| Quit \n");
 				switch (decision) {
 				case 1: {
 					int i = cardDeck.AskUserInput<int>("From which column do you wish to take the cards ? \n");
 					int j = cardDeck.AskUserInput<int>("To which column do you wish to move the cards ? \n");
 					int k = cardDeck.AskUserInput<int>("What is the row of the highest card you wish to move ? \n");
-					SolitaireClass.MoveCards(i, j, k);
+					solitaireClass.MoveCards(i, j, k);
 					break;
 				}
 				case 2: {
-					SolitaireClass.HitWaste();
+					solitaireClass.HitWaste();
 					break;
 				}
 				case 3: {
 					int i = cardDeck.AskUserInput<int>("Which column will the waste card go to ? \n");
-					SolitaireClass.GetCardFromWaste(i);
+					solitaireClass.GetCardFromWaste(i);
 					break;
 				}
 				case 4: {
 					int i = cardDeck.AskUserInput<int>("From which column do you wish to take a card ? \n");
 					int j = cardDeck.AskUserInput<int>("To what pile do you wish to send the card ? \n");
-					SolitaireClass.SendCardToPile(i, j);
+					solitaireClass.SendCardToPile(i, j);
 					break;
 				}
 				case 5: {
 					int i = cardDeck.AskUserInput<int>("From which pile do you wish to take a card ? \n");
 					int j = cardDeck.AskUserInput<int>("To what column do you wish to send the card ? \n");
-					SolitaireClass.GetCardFromPile(i, j);
+					solitaireClass.GetCardFromPile(i, j);
 					break;
 				}
 				case 6: {
 					int i = cardDeck.AskUserInput<int>("To what pile do you wish to move the card ? \n");
-					SolitaireClass.SendCardFromWasteToPile(i);
+					solitaireClass.SendCardFromWasteToPile(i);
 					break;
 				}
 				case 7: {
@@ -150,7 +150,7 @@ int main() {
 				}
 			}
 		
-			if (SolitaireClass.CheckWin()) {
+			if (solitaireClass.CheckWin()) {
 				if (!wasDisplayed) {
 					won = true;
 					wasDisplayed = true;
@@ -172,7 +172,7 @@ int main() {
 				case 1: {
 					won = false;
 					wasDisplayed = false;
-					SolitaireClass.CreateGame();
+					solitaireClass.CreateGame();
 					break;
 				}
 				case 2: {
@@ -185,7 +185,7 @@ int main() {
 					wasDisplayed = true;
 					message << "Here are every scores you have obtained this session: " << '\n';
 					cons.ClearConsole();
-					message << SolitaireClass.DisplayScores();
+					message << solitaireClass.DisplayScores();
 					cons.DisplayMessage(message.str());
 					break;
 				}

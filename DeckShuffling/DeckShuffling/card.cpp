@@ -3,26 +3,32 @@
 using namespace std;
 
 int card::GetCardVal() {
-	return cardVal;
+	return CardValue;
 }
 
 int  card::GetCardHouse() {
-	return cardHouse;
+	return CardHouse;
 }
 
 bool card::WasCardDiscovered() {
-	return wasDiscovered;
+	return WasDiscovered;
 }
 
 void card::DiscoverCard() {
-	wasDiscovered = true;
+	WasDiscovered = true;
 }
 
 string card::DisplayInfo() {
 	ostringstream message;
-	if (WasCardDiscovered()) {
+
+	if (!WasCardDiscovered()) {
+		//If a card is not currently discovered, return XX.
+		message << "XX ";
+		return(message.str());
+	}
+
 		//Special case for cards displayed with letters instead of numbers.
-		switch (GetCardVal()) {
+	switch (GetCardVal()) {
 		case 1: {
 			message << "A";
 			break;
@@ -44,8 +50,8 @@ string card::DisplayInfo() {
 
 			break;
 		}
-		}
-		switch (GetCardHouse()) {
+	}
+	switch (GetCardHouse()) {
 			//Display the house of the cards.
 		case 1: {
 			message << "H";
@@ -63,16 +69,9 @@ string card::DisplayInfo() {
 			message << "C";
 			break;
 		}
-		}
-		if (GetCardVal() != 10) {
-			message << " ";
-		}
-		return(message.str());
-
 	}
-	else {
-		//If a card is not currently discovered, return XX.
-		message << "XX ";
-		return(message.str());
+	if (GetCardVal() != 10) {
+		message << " ";
 	}
+	return(message.str());
 }

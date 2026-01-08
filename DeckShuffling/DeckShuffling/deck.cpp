@@ -1,12 +1,12 @@
 #include "deck.h"
 
 void deck::GenerateDeck() {
-	cardList.clear();
+	CardList.clear();
 	shared_ptr<card> cardBase;
 	for (int i = 1; i <= 4; i++) {
 		for (int j = 1; j <= 13; j++) {
 			cardBase = make_unique<card>(j, i);
-			cardList.push_back(cardBase);
+			CardList.push_back(cardBase);
 		}
 	}
 }
@@ -15,50 +15,50 @@ void deck::DisplayDeck() {
 	console cons;
 	ostringstream message;
 	message << "Current card list and order: " << '\n';
-	for (int i = 0; i < cardList.size(); i++) {
-		switch (cardList[i]->GetCardVal()) {
-		case 1: {
-			message << "Ace";
-			break;
-		}
-		case 11: {
-			message << "Jack";
-			break;
-		}
-		case 12: {
-			message << "Queen";
-			break;
-		}
-		case 13: {
-			message << "King";
-			break;
-		}
-		default: {
-			message << cardList[i]->GetCardVal();
-			break;
-		}
+	for (int i = 0; i < CardList.size(); i++) {
+		switch (CardList[i]->GetCardVal()) {
+			case 1: {
+				message << "Ace";
+				break;
+			}
+			case 11: {
+				message << "Jack";
+				break;
+			}
+			case 12: {
+				message << "Queen";
+				break;
+			}
+			case 13: {
+				message << "King";
+				break;
+			}
+			default: {
+				message << CardList[i]->GetCardVal();
+				break;
+			}
 
 		}		
 
 		message << " of ";
 
-		switch (cardList[i]->GetCardHouse()) {
-		case 1: {
-			message << "Hearts" << '\n';
-			break;
-		}
-		case 2: {
-			message << "Spades" << '\n';
-			break;
-		}
-		case 3: {
-			message << "Diamonds" << '\n';
-			break;
-		}
-		case 4: {
-			message << "Clubs" << '\n';
-			break;
-		}
+		switch (CardList[i]->GetCardHouse()) {
+			case 1: {
+				message << "Hearts" << '\n';
+				break;
+			}
+			case 2: {
+				message << "Spades" << '\n';
+				break;
+			}
+			case 3: {
+				message << "Diamonds" << '\n';
+				break;
+			}
+			case 4: {
+				message << "Clubs" << '\n';
+				break;
+			}
 		}
 
 	}		
@@ -66,28 +66,28 @@ void deck::DisplayDeck() {
 }
 
 void deck::UnShuffleDeck() {
-	int n = cardList.size();
+	int n = CardList.size();
 	
-	vector<int> vals;
+	vector<int> cardValues;
 
-	for (int i = 0; i < cardList.size(); i++) {
-		vals.push_back(cardList[i]->GetCardVal());
+	for (int i = 0; i < CardList.size(); i++) {
+		cardValues.push_back(CardList[i]->GetCardVal());
 	}
 
-	QuickSort(cardList, 0, n - 1, vals);
+	QuickSort(CardList, 0, n - 1, cardValues);
 
-	SortHouses(cardList, 4, 13);
+	SortHouses(CardList, 4, 13);
 }
 
 
 
 void deck::QuickSort(vector<shared_ptr<card>> &cardList, int low, int high, vector<int> &objectVals) {
 	if (low < high) {
-		int pi = Partition(cardList, low, high, objectVals);
+		int pivot = Partition(cardList, low, high, objectVals);
 
 
-		QuickSort(cardList, low, pi - 1, objectVals);
-		QuickSort(cardList, pi + 1, high, objectVals);
+		QuickSort(cardList, low, pivot - 1, objectVals);
+		QuickSort(cardList, pivot + 1, high, objectVals);
 	}
 }
 
@@ -109,8 +109,6 @@ int deck::Partition(vector<shared_ptr<card>> &cardList, int low, int high, vecto
 	return(i + 1);
 }
 
-//These quicksort functions arent very clean, but they do their job, since I only ever sort cards with them I did not bother making them templates, but if I ever want to make something more modular that is one of the first things I would do.
-
 void deck::ShuffleDeck() {
 	int i = 0;
 	srand(time(0));
@@ -119,7 +117,7 @@ void deck::ShuffleDeck() {
 		int otherIndex = rand() % 52;
 
 		if (index != otherIndex) {
-			swap(cardList[index], cardList[otherIndex]);
+			swap(CardList[index], CardList[otherIndex]);
 			i++;
 		}
 
@@ -127,19 +125,19 @@ void deck::ShuffleDeck() {
 }
 
 void deck::SortHouses(vector<shared_ptr<card>> &cardList, int houseCount, int increment) {		
-	vector<int> vals;
+	vector<int> values;
 	for (int i = 0; i < cardList.size(); i++) {
-		vals.push_back(cardList[i]->GetCardHouse());
+		values.push_back(cardList[i]->GetCardHouse());
 	}
 	for (int i = 0; i < increment; i++) {
-		QuickSort(cardList, 0 + (houseCount * i), houseCount + (houseCount * i) - 1, vals);
+		QuickSort(cardList, 0 + (houseCount * i), houseCount + (houseCount * i) - 1, values);
 	}
 }
 
 int deck::GetDeckSize() {
-	return cardList.size();
+	return CardList.size();
 }
 
 vector<shared_ptr<card>> deck::GiveDeck() {
-	return cardList;
+	return CardList;
 }

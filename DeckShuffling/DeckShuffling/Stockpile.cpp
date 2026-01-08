@@ -1,15 +1,15 @@
 #include "Stockpile.h"
 
 void Stockpile::ReceiveCards(vector<shared_ptr<card>> cardList) {
-	stockPile.insert(stockPile.end(), cardList.begin(), cardList.end());
-	CardCount = stockPile.size();
-	for (int i = 0; i < stockPile.size(); i++) {
-		stockPile[i]->DiscoverCard();
+	StockPile.insert(StockPile.end(), cardList.begin(), cardList.end());
+	CardCount = StockPile.size();
+	for (int i = 0; i < StockPile.size(); i++) {
+		StockPile[i]->DiscoverCard();
 	}
 }
 
 bool Stockpile::CardsLeftInStockPile() {
-	if (stockPile.size() > 0) {
+	if (StockPile.size() > 0) {
 		return true;
 	}
 	else {
@@ -18,48 +18,53 @@ bool Stockpile::CardsLeftInStockPile() {
 }
 
 void Stockpile::SendCardsToWaste() {
-	int i = 0;
-	if (CardCount > 0) {
-		if (stockPile.size() == 0) {
-			stockPile.insert(stockPile.begin(), wastePile.begin(), wastePile.end());
-			wastePile.clear();
-		}
-		vector<shared_ptr<card>> cardsToSend;
-		while (i < 3) {
-			if (stockPile.size() > 0) {
-				cardsToSend.push_back(stockPile[0]);
-				stockPile.erase(stockPile.begin());
-			}
-			i++;
-		}
-		reverse(cardsToSend.begin(), cardsToSend.end());
-		wastePile.insert(wastePile.end(), cardsToSend.begin(), cardsToSend.end());
+
+	if (CardCount <= 0) {
+		return;
 	}
+
+	if (StockPile.size() == 0) {
+		StockPile.insert(StockPile.begin(), WastePile.begin(), WastePile.end());
+		WastePile.clear();
+	}
+
+	int i = 0;
+	vector<shared_ptr<card>> cardsToSend;
+
+	while (i < 3) {
+		if (StockPile.size() > 0) {
+			cardsToSend.push_back(StockPile[0]);
+			StockPile.erase(StockPile.begin());
+		}
+		i++;
+	}
+	reverse(cardsToSend.begin(), cardsToSend.end());
+	WastePile.insert(WastePile.end(), cardsToSend.begin(), cardsToSend.end());
 
 }
 
 string Stockpile::DisplayWaste() {
-	ostringstream msg;
+	ostringstream message;
 	int i = 0;
-	int len = wastePile.size();
+	int len = WastePile.size();
 	int j = len - 1;
 	while (i < 3) {
 		if (j - i >= 0 && len != 0) {
-			msg << wastePile[j - i]->DisplayInfo() << " ";
+			message << WastePile[j - i]->DisplayInfo() << " ";
 		}
 		i++;
 	}
-	return msg.str();
+	return message.str();
 }
 
 void Stockpile::ResetStockPile() {
-	stockPile.insert(stockPile.begin(), wastePile.begin(), wastePile.end());
+	StockPile.insert(StockPile.begin(), WastePile.begin(), WastePile.end());
 }
 
 shared_ptr<card> Stockpile::SendCardFromWaste() {
-	int len = wastePile.size();
-	if (len > 0) {
-		return wastePile[len-1];
+	int length = WastePile.size();
+	if (length > 0) {
+		return WastePile[length-1];
 	}
 	else {
 		return nullptr;
@@ -68,11 +73,11 @@ shared_ptr<card> Stockpile::SendCardFromWaste() {
 }
 
 void Stockpile::RemoveCardFromPile() {
-	wastePile.erase(wastePile.end() - 1);
+	WastePile.erase(WastePile.end() - 1);
 	CardCount--;
 }
 
 void Stockpile::Reset() {
-	stockPile.clear();
-	wastePile.clear();
+	StockPile.clear();
+	WastePile.clear();
 }

@@ -6,7 +6,7 @@
 
 class cardRow {
 public:
-	cardRow(vector<shared_ptr<card>> rowContent) : rowContent(rowContent) {};
+	cardRow(vector<shared_ptr<card>> rowContent) : RowContent(rowContent) {};
 	string GetCard(int i);
 
 	bool bCanReceiveCard(shared_ptr<card> cCard);
@@ -24,5 +24,5 @@ public:
 	void Reset();
 
 private:
-	vector<shared_ptr<card>> rowContent;
+	vector<shared_ptr<card>> RowContent;
 };

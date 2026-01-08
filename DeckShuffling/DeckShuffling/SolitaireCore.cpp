@@ -2,7 +2,7 @@
 
 void SolitaireCore::CreateGame() {
 	deck cardDeck;
-	score->NewGame();
+	ScoreObject->NewGame();
 	cardDeck.GenerateDeck();
 	cardDeck.ShuffleDeck();
 
@@ -12,226 +12,253 @@ void SolitaireCore::CreateGame() {
 
 	rowStartingCards.insert(rowStartingCards.begin(), deckInstance.begin(), deckInstance.begin());
 
-	stock->Reset();
+	Stock->Reset();
 
 	for (int i = 0; i < 7; i++) 
 	{
-		rowContentArr[i]->Reset();
+		RowContentArr[i]->Reset();
 	}
 	for (int i = 0; i < 4; i++) {
-		pileArr[i]->Reset();
+		PileArr[i]->Reset();
 	}
 
 	int i = 0;
 	int j = 0;
 	while (i < 7) {
 		rowStartingCards.insert(rowStartingCards.begin(), deckInstance.begin() + j, deckInstance.begin() + j + i + 1);
-		rowContentArr[i]->ReceiveCards(rowStartingCards);
-		rowContentArr[i]->MakeCardVisible();
+		RowContentArr[i]->ReceiveCards(rowStartingCards);
+		RowContentArr[i]->MakeCardVisible();
 		rowStartingCards.clear();
 		i++;		
 		j += i;
 	}
 	rowStartingCards.insert(rowStartingCards.begin(), deckInstance.begin() + j, deckInstance.end());
-	stock->ReceiveCards(rowStartingCards);
+	Stock->ReceiveCards(rowStartingCards);
 }
 
 void SolitaireCore::DisplayGame() {
-	ostringstream msg;
-	console cons;
-	msg << "   1   2   3   4   5   6   7" << '\n';
-	int GameHeight = rowContentArr[0]->GetRowLength();
-	//To make sure the game always displays every card, it will make always take as many lines as the longest vector out of the 7 rows.
+	ostringstream message;
+	console console;
+	message << "   1   2   3   4   5   6   7" << '\n';
+	int GameHeight = RowContentArr[0]->GetRowLength();
+
+	//To make sure the game always displays every card, every line will be as long as the longest vector out of the 7 rows.
+	
 	for (int i = 1; i < 7; i++) {
-		if (GameHeight < rowContentArr[i]->GetRowLength()) {
-			GameHeight = rowContentArr[i]->GetRowLength();
+		if (GameHeight < RowContentArr[i]->GetRowLength()) {
+			GameHeight = RowContentArr[i]->GetRowLength();
 		}
 	}
 	//This loop displays every card currently on the game board.
 	for (int i = 0; i < GameHeight; i++) {		
 		if (i + 1 < 10) {
-			msg << "0";
+			message << "0";
 		}
-		msg << i + 1 << " ";
+		message << i + 1 << " ";
 
 		for (int j = 0; j < 7; j++) {
-			msg << rowContentArr[j]->GetCard(i) << " ";
+			message << RowContentArr[j]->GetCard(i) << " ";
 		}
-		msg << '\n';
+		message << '\n';
 	}
-	msg << '\n';
-	msg << "Waste: " << stock->DisplayWaste() << '\n';
-	msg << "Piles:  1   2   3   4" << '\n';
-	msg << "        ";
+	message << '\n';
+	message << "Waste: " << Stock->DisplayWaste() << '\n';
+	message << "Piles:  1   2   3   4" << '\n';
+	message << "        ";
 	for (int i = 0; i < 4; i++) {
-		msg << pileArr[i]->ShowTopCard() << " ";
+		message << PileArr[i]->ShowTopCard() << " ";
 	}
-	msg << '\n';
-	msg << "Moves: " << score->DisplayScore();
-	cons.DisplayMessage(msg.str());
+	message << '\n';
+	message << "Moves: " << ScoreObject->DisplayScore();
+	console.DisplayMessage(message.str());
 }
 
 void SolitaireCore::MoveCards(int i, int j, int k) {
-	ostringstream msg;
-	console cons;
-	int nI = i - 1;
-	int nJ = j - 1;
-	int nK = k - 1;
-	cons.ClearConsole();
-	if ( nI < 7 && nJ < 7 && nK < rowContentArr[nI]->GetRowLength() && nI >= 0 && nJ >= 0 && nK >= 0) {
-		vector<shared_ptr<card>> CardsToGive = rowContentArr[nI]->GiveCards(nK);
-		if (rowContentArr[nJ]->bCanReceiveCard(CardsToGive[0]) && rowContentArr[nI]->bCanGiveCards(nK)) {
-			rowContentArr[nI]->RemoveCards(nK);
-			rowContentArr[nJ]->ReceiveCards(CardsToGive);
-			score->IncrementScore();
-			msg << "Cards succesfuly sent from column " << i << " to column " << j << "!" << '\n';
-		}
-		else {
-			CardsToGive.clear();
-			msg << "ERROR! The selected cards are not compatible with the selected column" << '\n';
-		}
+	ostringstream message;
+	console console;
+	int fromColumn = i - 1;
+	int toColumn = j - 1;
+	int highestInsertedCardIndex = k - 1;
+	console.ClearConsole();
+
+	if (fromColumn >= 7 || fromColumn < 0 || toColumn >= 7 || toColumn < 0 || highestInsertedCardIndex >= RowContentArr[fromColumn]->GetRowLength() || highestInsertedCardIndex < 0) {
+		message << "ERROR! the selected column does not have a card at the index specified" << '\n';
+		console.DisplayMessage(message.str());
+		return;
 	}
-	else {
-		msg << "ERROR! the selected column does not have a card at the index specified" << '\n';
+
+	vector<shared_ptr<card>> CardsToGive = RowContentArr[fromColumn]->GiveCards(highestInsertedCardIndex);
+
+	if (!RowContentArr[toColumn]->bCanReceiveCard(CardsToGive[0]) || !RowContentArr[fromColumn]->bCanGiveCards(highestInsertedCardIndex)) {
+		CardsToGive.clear();
+		message << "ERROR! The selected cards are not compatible with the selected column" << '\n';
+		console.DisplayMessage(message.str());
+		return;
 	}
-	cons.DisplayMessage(msg.str());
+
+	RowContentArr[fromColumn]->RemoveCards(highestInsertedCardIndex);
+	RowContentArr[toColumn]->ReceiveCards(CardsToGive);
+	ScoreObject->IncrementScore();
+	message << "Cards succesfuly sent from column " << i << " to column " << j << "!" << '\n';
+	
+	console.DisplayMessage(message.str());
 }
 
-void SolitaireCore::GetCardFromWaste(int targetRow) {
-	ostringstream msg;
-	console cons;
-	cons.ClearConsole();
-	int nI = targetRow - 1;
-	shared_ptr<card> wasteCard = stock->SendCardFromWaste();
-	if (wasteCard != nullptr) {
-		if (nI < 7 && nI >= 0) {
-			if (rowContentArr[nI]->bCanReceiveCard(wasteCard)) {
-				vector<shared_ptr<card>> wasteCardV;
-				wasteCardV.push_back(wasteCard);
-				rowContentArr[nI]->ReceiveCards(wasteCardV);
-				stock->RemoveCardFromPile();
-				score->IncrementScore();
-				msg << "Card taken from waste succesfully !";
-			}
-			else {
-				msg << "ERROR! " << wasteCard->DisplayInfo() << " is not compatible with the selected column";
-			}
-		}
-		else {
-			msg << "ERROR! The specified column does not exist." << '\n';
-		}
+void SolitaireCore::GetCardFromWaste(int i) {
+	ostringstream message;
+	console console;
+	console.ClearConsole();
+	int targetRow = i - 1;
+	shared_ptr<card> wasteCard = Stock->SendCardFromWaste();
+
+	if (wasteCard == nullptr) {
+		message << "ERROR! No card is currently in the waste pile." << '\n';
+		console.DisplayMessage(message.str());
+		return;
 	}
-	else {
-		msg << "ERROR! No card is currently in the waste pile." << '\n';
+
+	if (targetRow >= 7 || targetRow < 0) {
+		message << "ERROR! The specified column does not exist." << '\n';
+		console.DisplayMessage(message.str());
+		return;
 	}
-	cons.DisplayMessage(msg.str());
+
+	if (!RowContentArr[targetRow]->bCanReceiveCard(wasteCard)) {
+		message << "ERROR! " << wasteCard->DisplayInfo() << " is not compatible with the selected column";
+		console.DisplayMessage(message.str());
+		return;
+	}
+
+	vector<shared_ptr<card>> wasteCardsVector;
+	wasteCardsVector.push_back(wasteCard);
+	RowContentArr[targetRow]->ReceiveCards(wasteCardsVector);
+	Stock->RemoveCardFromPile();
+	ScoreObject->IncrementScore();
+	message << "Card taken from waste succesfully !";
+			
+	console.DisplayMessage(message.str());
 }
 
 void SolitaireCore::HitWaste() {
-	console cons;
-	cons.ClearConsole();
-	stock->SendCardsToWaste();
+	console console;
+	console.ClearConsole();
+	Stock->SendCardsToWaste();
 }
 
 void SolitaireCore::SendCardToPile(int i, int j) {
-	int nI = i - 1;
-	int nJ = j - 1;
-	ostringstream msg;
-	console cons;
-	cons.ClearConsole();
-	if (nI >= 0 && nI < 7 && nJ >= 0 && nJ < 4) {
-		int len = rowContentArr[nI]->GetRowLength() - 1;
-		shared_ptr<card> C = rowContentArr[nI]->GiveCards(len)[0];
-		if (pileArr[nJ]->bCanReceiveCard(C)) {
-			pileArr[nJ]->AddCard(C);
-			rowContentArr[nI]->RemoveCards(len);
-			score->IncrementScore();
-			msg << C->DisplayInfo() <<" successfully added to pile " << j << "!" << '\n';
-		}
-		else {
-			msg << "ERROR! " << C->DisplayInfo() << "  is not compatible with the pile." << '\n';
-		}
+	int selectedColumn = i - 1;
+	int selectedPile = j - 1;
+	ostringstream message;
+	console console;
+	console.ClearConsole();
+
+	if (selectedColumn >= 7 || selectedColumn < 0 || selectedPile >= 4 || selectedPile < 0) {
+		message << "ERROR! The selected pile or column does not exist." << '\n';
+		console.DisplayMessage(message.str());
+		return;
 	}
-	else {
-		msg << "ERROR! The selected pile or column does not exist." << '\n';
+
+	int lenght = RowContentArr[selectedColumn]->GetRowLength() - 1;
+	shared_ptr<card> selectedCard = RowContentArr[selectedColumn]->GiveCards(lenght)[0];
+
+	if (!PileArr[selectedPile]->bCanReceiveCard(selectedCard)) {
+		message << "ERROR! " << selectedCard->DisplayInfo() << "  is not compatible with the pile." << '\n';
+		console.DisplayMessage(message.str());
+		return;
 	}
-	cons.DisplayMessage(msg.str());
+
+
+	PileArr[selectedPile]->AddCard(selectedCard);
+	RowContentArr[selectedColumn]->RemoveCards(lenght);
+	ScoreObject->IncrementScore();
+	message << selectedCard->DisplayInfo() <<" successfully added to pile " << j << "!" << '\n';
+
+	console.DisplayMessage(message.str());
 
 }
 
 void SolitaireCore::GetCardFromPile(int i, int j) {
-	int nI = i - 1;
-	int nJ = j - 1;
-	ostringstream msg;
-	console cons;
-	cons.ClearConsole();
-	if (nI >= 0 && nI < 4 && nJ >= 0 && nJ < 7) {
-		shared_ptr<card> C = pileArr[nI]->GiveCard();
-		if (C != nullptr) {
-			if (rowContentArr[nJ]->bCanReceiveCard(C)) {
-				vector<shared_ptr<card>> CA;
-				CA.push_back(C);
-				rowContentArr[nJ]->ReceiveCards(CA);
-				pileArr[nI]->RemoveCard();
-				score->IncrementScore();
-				msg << "Card moved from pile to column." << '\n';
-				}
-			else {
-				msg << "ERROR! The selected card is not compatible with the selected column." << '\n';
-			}
-		}
-		else {
-			msg << "ERROR! The selected pile is empty" << '\n';
-		}
+	int selectedPile = i - 1;
+	int selectedColumn = j - 1;
+	ostringstream message;
+	console console;
+	console.ClearConsole();
+
+	if (selectedPile >= 4 || selectedPile < 0 || selectedColumn >= 7 || selectedColumn < 0) {
+		message << "ERROR! The selected pile or column does not exist." << '\n';
+		console.DisplayMessage(message.str());
+		return;
+	}
+
+
+	shared_ptr<card> selectedCard = PileArr[selectedPile]->GiveCard();
+
+	if (selectedCard == nullptr) {
+		message << "ERROR! The selected pile is empty" << '\n';
+		console.DisplayMessage(message.str());
+		return;
+	}
+
+	if (!RowContentArr[selectedColumn]->bCanReceiveCard(selectedCard)) {
+		message << "ERROR! The selected card is not compatible with the selected column." << '\n';
+		console.DisplayMessage(message.str());
+		return;
+	}
+
+	vector<shared_ptr<card>> cardVector;
+	cardVector.push_back(selectedCard);
+	RowContentArr[selectedColumn]->ReceiveCards(cardVector);
+	PileArr[selectedPile]->RemoveCard();
+	ScoreObject->IncrementScore();
+	message << "Card moved from pile to column." << '\n';
+
 		
-	}
-	else {
-		msg << "ERROR! The selected pile or column does not exist." << '\n';
-	}
-	cons.DisplayMessage(msg.str());
+	console.DisplayMessage(message.str());
 }
 
 void SolitaireCore::SendCardFromWasteToPile(int i) {
-	ostringstream msg;
-	console cons;
-	cons.ClearConsole();
-	int nI = i - 1;
-	shared_ptr<card> wasteCard = stock->SendCardFromWaste();
-	if (wasteCard != nullptr) {
-		if (nI < 4 && nI >= 0) {
-			if (pileArr[nI]->bCanReceiveCard(wasteCard)) {
-				pileArr[nI]->AddCard(wasteCard);
-				stock->RemoveCardFromPile();
-				score->IncrementScore();
-				msg << "Card taken from waste succesfully !";
-			}
-			else {
-				msg << "ERROR! " << wasteCard->DisplayInfo() << " is not compatible with the selected pile";
-			}
-		}
-		else {
-			msg << "ERROR! The specified pile does not exist." << '\n';
-		}
+	ostringstream message;
+	console console;
+	console.ClearConsole();
+	int SelectedPile = i - 1;
+	shared_ptr<card> wasteCard = Stock->SendCardFromWaste();
+
+	if (wasteCard == nullptr) {
+		message << "ERROR! No card is currently in the waste pile." << '\n';
+		console.DisplayMessage(message.str());
+		return;
 	}
-	else {
-		msg << "ERROR! No card is currently in the waste pile." << '\n';
+
+	if (SelectedPile >= 4 || SelectedPile < 0) {
+		message << "ERROR! The specified pile does not exist." << '\n';
+		console.DisplayMessage(message.str());
+		return;
 	}
-	cons.DisplayMessage(msg.str());
+
+	if (!PileArr[SelectedPile]->bCanReceiveCard(wasteCard)) {
+		message << "ERROR! " << wasteCard->DisplayInfo() << " is not compatible with the selected pile";
+		console.DisplayMessage(message.str());
+		return;
+	}
+
+	PileArr[SelectedPile]->AddCard(wasteCard);
+	Stock->RemoveCardFromPile();
+	ScoreObject->IncrementScore();
+	message << "Card taken from waste succesfully !";
+	console.DisplayMessage(message.str());
 }
 
 bool SolitaireCore::CheckWin() {
 
 	for (int i = 0; i < 4; i++) {
-		if (pileArr[i]->GivePileSize() != 13) {
-			break;
-		}
-		else if (i == 3) {	
-			return true;
+		if (PileArr[i]->GivePileSize() != 13) {
+			return false;
 		}
 	}
-	return false;
+	return true;
+
 }
 
 string SolitaireCore::DisplayScores() {
-	return score->DisplayAllScores();
+	return ScoreObject->DisplayAllScores();
 }

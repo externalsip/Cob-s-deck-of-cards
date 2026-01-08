@@ -5,7 +5,7 @@ using namespace std;
 
 class card {
 public:	
-	card(int cardVal, int cardHouse) : cardVal(cardVal), cardHouse(cardHouse) {};
+	card(int cardValue, int cardHouse) : CardValue(cardValue), CardHouse(cardHouse) {};
 	int GetCardVal();
 	int GetCardHouse();
 	bool WasCardDiscovered();
@@ -13,7 +13,7 @@ public:
 	string DisplayInfo();
 
 private:
-	int cardVal;
-	int cardHouse;
-	bool wasDiscovered = false;
+	int CardValue;
+	int CardHouse;
+	bool WasDiscovered = false;
 };
